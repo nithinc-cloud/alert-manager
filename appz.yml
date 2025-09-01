@@ -8,7 +8,7 @@ build:
     env: DEV
     build_file: none
     output_files: output/*.zip
-    image_template: alertmanager-0.20
+    image_template: alertmanager-0.28
 
 deploy:
     context: alpha/DEV
@@ -27,5 +27,5 @@ properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
     SLACK_CHANNEL: appz-delivery
-    CLUSTER_NAME: appz-janabank
-    revision : 3
+    CLUSTER_NAME: CloudOrbit-Unityfi
+    revision : 0
