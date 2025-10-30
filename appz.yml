@@ -5,13 +5,13 @@ app:
 
 build:
     version: 0.2
-    env: DEV
+    env: PROD
     build_file: none
     output_files: output/*.zip
     image_template: alertmanager-0.20
 
 deploy:
-    context: alpha/DEV
+    context: alpha/PROD
     type: statefulset
     replicas: 1
     port:
@@ -19,6 +19,7 @@ deploy:
 
 volumes:
   - claim: alertmanager-data
+    class: linode-block-storage
     mount: /appz/data
     name: data
     size: 50Gi
@@ -26,6 +27,6 @@ volumes:
 properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
-    SLACK_CHANNEL: notification-openebs
-    CLUSTER_NAME: CloudOrbit-VV
+    SLACK_CHANNEL: appz-delivery
+    CLUSTER_NAME: cloudorbit-vv
     revision : 1
