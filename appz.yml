@@ -29,5 +29,5 @@ properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
     SLACK_CHANNEL: appz-delivery
-    CLUSTER_NAME: cloudorbit-vv
+    CLUSTER_NAME: VV-CloudOrbit
     revision : 4
