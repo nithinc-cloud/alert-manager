@@ -5,13 +5,13 @@ app:
 
 build:
     version: 0.2
-    env: DEV
+    env: POC
     build_file: none
     output_files: output/*.zip
-    image_template: alertmanager-0.20
+    image_template: alertmanager-0.28
 
 deploy:
-    context: alpha/DEV
+    context: muthoot/POC
     type: statefulset
     replicas: 1
     port:
@@ -27,5 +27,5 @@ properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
     SLACK_CHANNEL: notification-openebs
-    CLUSTER_NAME: AWS_QA
+    CLUSTER_NAME: muthoot_POC
     revision : 19
