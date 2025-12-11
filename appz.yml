@@ -1,7 +1,7 @@
 app:
     name: alertmanager
     code: alertmanager
-    notify: appz@ecloudcontrol.com
+   # notify: appz@ecloudcontrol.com
 
 build:
     version: 0.2
@@ -16,6 +16,7 @@ deploy:
     replicas: 1
     port:
     - 9093
+    ingress: none
 
 volumes:
   - claim: alertmanager-data
@@ -26,6 +27,6 @@ volumes:
 properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
-    SLACK_CHANNEL: appz-delivery
+    SLACK_CHANNEL: appz-images
     CLUSTER_NAME: muthoot_POC
     revision : 19
