@@ -16,7 +16,6 @@ deploy:
     replicas: 1
     port:
     - 9093
-    ingress: none
 
 volumes:
   - claim: alertmanager-data
