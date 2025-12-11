@@ -27,6 +27,6 @@ volumes:
 properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
-    SLACK_CHANNEL: appz-images
+    SLACK_CHANNEL: appz-delivery
     CLUSTER_NAME: muthoot_POC
     revision : 19
