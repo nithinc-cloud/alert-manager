@@ -5,7 +5,7 @@ app:
 
 build:
     version: 0.2
-    env: POC
+    env: DEV
     build_file: none
     output_files: output/*.zip
     image_template: alertmanager-0.28
