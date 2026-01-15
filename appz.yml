@@ -11,7 +11,7 @@ build:
     image_template: alertmanager-0.28
 
 deploy:
-    context: muthoot/POC
+    context: nithinc-cloud/DEV
     type: statefulset
     replicas: 1
     port:
@@ -27,5 +27,5 @@ properties:
     SLACK_API_URL:
       vault: SLACK_API_URL
     SLACK_CHANNEL: appz-delivery
-    CLUSTER_NAME: muthoot_POC
+    CLUSTER_NAME: Test-Demo
     revision : 19
